@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import scss from './searchBar.module.css'
 
 const SearchBar = ({ onSearch }) => {
   const [query, setQuery] = useState('');
@@ -14,14 +15,14 @@ const SearchBar = ({ onSearch }) => {
   };
 
   return (
-    <div>
-      <input
+    <div className={scss.box}>
+      <input className={scss.input}
         type="text"
         placeholder="Enter city name"
         value={query}
         onChange={handleInputChange}
       />
-      <button onClick={handleSearch}>Search</button>
+      <button className={scss.btn} onClick={handleSearch}>Search</button>
     </div>
   );
 };

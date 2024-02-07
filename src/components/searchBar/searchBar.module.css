@@ -1,0 +1,15 @@
+.box{
+    margin-top: 50px;
+    margin-left: 40px;
+}
+
+.input{
+    padding: 20px;
+    width: 500px;
+    border-radius: 20px;
+}
+
+.btn{
+    padding: 20px;
+    border-radius: 20px;
+}

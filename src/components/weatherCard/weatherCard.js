@@ -341,12 +341,14 @@ const WeatherCard = () => {
                 : `${kelvinToFahrenheit(weatherData.main.temp).toFixed(0)} °F`}
             </p>
             <p className={wcss.text}>{weatherData.weather[0].description}</p>
-            <button className={wcss.btngr} onClick={toggleToCelsius}>
+            <div className={wcss.boxBtn}>
+          <button className={wcss.btngr} onClick={toggleToCelsius}>
               °C
             </button>
             <button className={wcss.btngr} onClick={toggleToFahrenheit}>
               °F
             </button>
+            </div>
           </div>
           <button className={wcss.bremove} onClick={() => handleRemoveCity(index)}>
             Remove

@@ -188,40 +188,74 @@ const WeatherCard = ({ city }) => {
   };
 
   return (
+    // <div>
+    //   <SearchBar onSearch={handleSearch} />
+    //   {error && <p style={{ color: 'red' }}>{error}</p>}
+    //   {weatherDataList.map((weatherData, index) => (
+    //     <div key={index} className={wcss.box}>
+    //       <div className={wcss.boxTwo}>
+    //         <h2 className={wcss.title}>{weatherData.name}</h2>
+    //         <p className={wcss.text}>{new Date(weatherData.dt * 1000).toLocaleString()}</p>
+    //         <p className={wcss.text}>
+    //           {isCelsius
+    //             ? `${kelvinToCelsius(weatherData.main.temp).toFixed(0)} °C`
+    //             : `${kelvinToFahrenheit(weatherData.main.temp).toFixed(0)} °F`}
+    //         </p>
+    //         <p className={wcss.text}>{weatherData.weather[0].description}</p>
+    //         <div className={wcss.boxBtn}>
+    //           <button className={wcss.btngr} onClick={toggleToCelsius}>
+    //             °C
+    //           </button>
+    //           <button className={wcss.btngr} onClick={toggleToFahrenheit}>
+    //             °F
+    //           </button>
+    //         </div>
+    //       </div>
+    //       <button className={wcss.bremove} onClick={() => handleRemoveCity(index)}>
+    //         Remove
+    //       </button>
+    //       <div className={wcss.boxMap}>
+    //         <GoogleMaps key={`${weatherData.coord.lat}-${weatherData.coord.lon}`} lat={weatherData.coord.lat} lng={weatherData.coord.lon} />
+    //       </div>
+    //       <Forecast city={weatherData.name} />
+    //     </div>
+    //   ))}
+    // </div>
     <div>
-      <SearchBar onSearch={handleSearch} />
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-      {weatherDataList.map((weatherData, index) => (
-        <div key={index} className={wcss.box}>
-          <div className={wcss.boxTwo}>
-            <h2 className={wcss.title}>{weatherData.name}</h2>
-            <p className={wcss.text}>{new Date(weatherData.dt * 1000).toLocaleString()}</p>
-            <p className={wcss.text}>
-              {isCelsius
-                ? `${kelvinToCelsius(weatherData.main.temp).toFixed(0)} °C`
-                : `${kelvinToFahrenheit(weatherData.main.temp).toFixed(0)} °F`}
-            </p>
-            <p className={wcss.text}>{weatherData.weather[0].description}</p>
-            <div className={wcss.boxBtn}>
-              <button className={wcss.btngr} onClick={toggleToCelsius}>
-                °C
-              </button>
-              <button className={wcss.btngr} onClick={toggleToFahrenheit}>
-                °F
-              </button>
-            </div>
-          </div>
-          <button className={wcss.bremove} onClick={() => handleRemoveCity(index)}>
-            Remove
+  <SearchBar onSearch={handleSearch} />
+  {error && <p style={{ color: 'red' }}>{error}</p>}
+  {weatherDataList.map((weatherData, index) => (
+    <div key={index} className={wcss.box}>
+      <div className={wcss.boxTwo}>
+        <h2 className={wcss.title}>{weatherData.name}</h2>
+        <p className={wcss.text}>{new Date(weatherData.dt * 1000).toLocaleString()}</p>
+        <p className={wcss.text}>
+          {isCelsius
+            ? `${kelvinToCelsius(weatherData.main.temp).toFixed(0)} °C`
+            : `${kelvinToFahrenheit(weatherData.main.temp).toFixed(0)} °F`}
+        </p>
+        <p className={wcss.text}>{weatherData.weather[0].description}</p>
+        <div className={wcss.boxBtn}>
+          <button className={wcss.btngr} onClick={toggleToCelsius}>
+            °C
           </button>
-          <div className={wcss.boxMap}>
-            <GoogleMaps key={`${weatherData.coord.lat}-${weatherData.coord.lon}`} lat={weatherData.coord.lat} lng={weatherData.coord.lon} />
-          </div>
-          {/* Render the Forecast component inside the WeatherCard */}
-          <Forecast city={weatherData.name} />
+          <button className={wcss.btngr} onClick={toggleToFahrenheit}>
+            °F
+          </button>
         </div>
-      ))}
+      </div>
+      <button className={wcss.bremove} onClick={() => handleRemoveCity(index)}>
+        Remove
+      </button>
+      <div className={wcss.boxForecast}>
+        <Forecast city={weatherData.name} />
+      </div>
+      <div className={wcss.boxMap}>
+        <GoogleMaps key={`${weatherData.coord.lat}-${weatherData.coord.lon}`} lat={weatherData.coord.lat} lng={weatherData.coord.lon} />
+      </div>
     </div>
+  ))}
+</div>
   );
 };
 

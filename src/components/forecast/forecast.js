@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { getWeatherForecast } from '../api/apiForecast';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import moment from 'moment';
+import wcss from '../weatherCard/weatherCard.module.css'
 
 const Forecast = ({ city }) => {
   const [forecastData, setForecastData] = useState(null);
@@ -31,11 +32,11 @@ const Forecast = ({ city }) => {
   };
 
   return (
-    <div>
-      <h2>Weather Forecast for {city}</h2>
+    <div className={wcss.boxForecast}>
+      {/* <h2>Weather Forecast for {city}</h2> */}
       {forecastData && (
         <div>
-          <LineChart width={800} height={400} data={createChartData()}>
+          <LineChart width={500} height={300} data={createChartData()}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
             <YAxis />

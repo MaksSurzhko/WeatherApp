@@ -3,8 +3,9 @@ import { GoogleMap, LoadScript } from '@react-google-maps/api';
 
 const GoogleMaps = ({ lat, lng }) => {
   const mapStyles = {
-    height: '400px',
+    height: '100%',
     width: '100%',
+    float: 'right',
   };
 
   const defaultCenter = {
@@ -15,7 +16,6 @@ const GoogleMaps = ({ lat, lng }) => {
   return (
     <LoadScript googleMapsApiKey="AIzaSyA9bslaj5Bl5nLuQQXe8rr_PkhDvvZqzMs">
       <GoogleMap mapContainerStyle={mapStyles} center={defaultCenter} zoom={10}>
-        {/* Додаткові елементи або маркери на карті */}
       </GoogleMap>
     </LoadScript>
   );

@@ -6,18 +6,27 @@ i18n.use(initReactI18next).init({
     en: {
       translation: {
         title: 'Weather App',
+        Remove: 'Remove',
+        searchBarPlaceholder: 'Enter city name',
+        searchBarButton: 'Search',
         // Add more translations as needed
       },
     },
     uk: {
       translation: {
         title: 'Погода',
+        Remove: 'Видалити',
+        searchBarPlaceholder: 'Введіть назву міста',
+        searchBarButton: 'Пошук',
         // Add more translations as needed
       },
     },
     he: {
       translation: {
         title: 'אפליקציית מזג אוויר',
+        Remove: 'מחק',
+        searchBarPlaceholder: 'הזן את שם העיר',
+        searchBarButton: 'חיפוש',
         // Add more translations as needed
       },
     },

@@ -4,12 +4,27 @@
 }
 
 .input{
-    padding: 20px;
+    padding: 15px;
     width: 500px;
-    border-radius: 20px;
+    border: 2px solid #74737342;
+    border-right: none;
+    
+}
+
+.input:hover,
+.input:focus {
+    border: 2px solid #74737342;
 }
 
 .btn{
-    padding: 20px;
-    border-radius: 20px;
+    padding: 15px;
+    border: 2px solid #74737342;
+    border-left: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus{
+    background-color: rgba(96, 172, 172, 0.74);
 }

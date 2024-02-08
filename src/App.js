@@ -1,8 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 import Header from './components/header/header';
 import WeatherCard from './components/weatherCard/weatherCard';
+
 
 function App() {
   return (
@@ -14,3 +14,7 @@ function App() {
 }
 
 export default App;
+
+
+
+

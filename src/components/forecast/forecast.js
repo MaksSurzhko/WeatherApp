@@ -42,7 +42,7 @@ const Forecast = ({ city }) => {
             <YAxis />
             <Tooltip />
             <Legend />
-            <Line type="monotone" dataKey="temperature" stroke="#8884d8" name="Temperature (°C)" />
+            <Line type="monotone" dataKey="temperature" stroke="#8884d8" name="Temperature" />
           </LineChart>
         </div>
       )}

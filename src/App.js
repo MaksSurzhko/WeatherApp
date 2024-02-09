@@ -8,12 +8,13 @@ function App() {
   return (
     <div>
       <Header />
-      <WeatherCard city="Cherkasy" />
+      <WeatherCard city="" />
     </div>
   );
 }
 
 export default App;
+
 
 
 

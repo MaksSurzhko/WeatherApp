@@ -140,7 +140,7 @@ const WeatherCard = ({ city }) => {
   const [weatherDataList, setWeatherDataList] = useState([]);
   const [error, setError] = useState(null);
   const [isCelsius, setIsCelsius] = useState([]);
-  const [currentPage, setCurrentPage] = useState(0); // Track the active page
+  const [currentPage, setCurrentPage] = useState(0); 
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -233,11 +233,11 @@ const WeatherCard = ({ city }) => {
 
       {weatherDataList.length > 0 && (
         <div className={wcss.pagination}>
-          <button onClick={() => handlePageChange(-1)} disabled={currentPage === 0}>
+          <button className={wcss.btnPag} onClick={() => handlePageChange(-1)} disabled={currentPage === 0}>
             {'<'}
           </button>
-          <span>{currentPage + 1} / {weatherDataList.length}</span>
-          <button onClick={() => handlePageChange(1)} disabled={currentPage === weatherDataList.length - 1}>
+          <span className={wcss.spanPag}>{currentPage + 1} / {weatherDataList.length}</span>
+          <button className={wcss.btnPag} onClick={() => handlePageChange(1)} disabled={currentPage === weatherDataList.length - 1}>
             {'>'}
           </button>
         </div>

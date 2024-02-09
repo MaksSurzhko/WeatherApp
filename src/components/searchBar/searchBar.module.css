@@ -5,8 +5,8 @@
 }
 
 .input{
-    padding: 15px;
-    width: 500px;
+    padding: 20px;
+    width: 600px;
     border: 2px solid #74737342;
     border-right: none;
     border-top-left-radius: 10px;
@@ -16,7 +16,8 @@
 
 .input:hover,
 .input:focus {
-    border: 2px solid #74737342;
+    border: 2px solid #434957;;
+
 }
 
 .btn{
@@ -43,21 +44,16 @@ font-family: inherit;
 .suggestions {
     position: absolute;
     top: 100%;
-    /* Position the suggestion box below the search bar */
     left: 0;
     width: 500px;
-    /* Set the width of the suggestion box */
     max-height: 200px;
-    /* Set the maximum height of the suggestion box */
     overflow-y: auto;
-    /* Enable vertical scrolling if needed */
     border: 2px solid #74737342;
     border-top: none;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     background-color: #fff;
     z-index: 1;
-    /* Ensure the suggestion box appears above other content */
 }
 
 .btn {

@@ -28,7 +28,7 @@
 
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import '../header/header.css';
+import hcss from './header.module.css';
 import logo from '../img/logo.png'
 
 const Header = () => {
@@ -40,10 +40,10 @@ const Header = () => {
   };
 
   return (
-    <header className="app-header">
-      <img src={logo} alt="Logo" className="app-logo" />
-      <h1 className="app-title">{t('title')}</h1>
-      <div>
+    <header className={hcss.header}>
+      <img  src={logo} alt="Logo" className={hcss.logo} />
+      {/* <h1 className={hcss.title}>{t('title')}</h1> */}
+      <div className={hcss.headerBox} >
         <button onClick={() => changeLanguage('en')}>EN</button>
         <button onClick={() => changeLanguage('ua')}>UA</button>
         <button onClick={() => changeLanguage('he')}>HE</button>

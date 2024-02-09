@@ -1,6 +1,7 @@
 .box{
     margin-top: 50px;
-    margin-left: 40px;
+    display: flex;
+    justify-content: center;
 }
 
 .input{
@@ -8,6 +9,8 @@
     width: 500px;
     border: 2px solid #74737342;
     border-right: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
     
 }
 
@@ -17,14 +20,62 @@
 }
 
 .btn{
+font-family: inherit;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: calc(24 / 16);
     padding: 15px;
     border: 2px solid #74737342;
     border-left: none;
-    background-color: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: #FFFFFF;
+    background-color: #282c34;
     cursor: pointer;
 }
 
 .btn:hover,
 .btn:focus{
-    background-color: rgba(96, 172, 172, 0.74);
+    background-color: #434957;
+}
+
+
+.suggestions {
+    position: absolute;
+    top: 100%;
+    /* Position the suggestion box below the search bar */
+    left: 0;
+    width: 500px;
+    /* Set the width of the suggestion box */
+    max-height: 200px;
+    /* Set the maximum height of the suggestion box */
+    overflow-y: auto;
+    /* Enable vertical scrolling if needed */
+    border: 2px solid #74737342;
+    border-top: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #fff;
+    z-index: 1;
+    /* Ensure the suggestion box appears above other content */
+}
+
+.btn {
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: calc(24 / 16);
+    padding: 15px;
+    border: 2px solid #74737342;
+    border-left: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: #FFFFFF;
+    background-color: #282c34;
+    cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: #434957;
 }

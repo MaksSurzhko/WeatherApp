@@ -6,6 +6,7 @@ const GoogleMaps = ({ lat, lng }) => {
     height: '100%',
     width: '100%',
     float: 'right',
+    borderRadius: '20px',
   };
 
   const defaultCenter = {

@@ -44,9 +44,9 @@ const Header = () => {
       <img  src={logo} alt="Logo" className={hcss.logo} />
       {/* <h1 className={hcss.title}>{t('title')}</h1> */}
       <div className={hcss.headerBox} >
-        <button onClick={() => changeLanguage('en')}>EN</button>
-        <button onClick={() => changeLanguage('ua')}>UA</button>
-        <button onClick={() => changeLanguage('he')}>HE</button>
+        <button className={hcss.headerBtn} onClick={() => changeLanguage('en')}>EN</button>
+        <button className={hcss.headerBtn} onClick={() => changeLanguage('ua')}>UA</button>
+        <button className={hcss.headerBtn} onClick={() => changeLanguage('he')}>HE</button>
       </div>
     </header>
   );

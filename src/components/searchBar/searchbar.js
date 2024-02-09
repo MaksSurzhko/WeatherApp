@@ -108,6 +108,7 @@ const SearchBar = ({ onSearch }) => {
         </ul>
       )}
     </div>
+    
   );
 };
 

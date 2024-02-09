@@ -29,6 +29,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import '../header/header.css';
+import logo from '../img/logo.png'
 
 const Header = () => {
   const { t, i18n } = useTranslation();
@@ -40,6 +41,7 @@ const Header = () => {
 
   return (
     <header className="app-header">
+      <img src={logo} alt="Logo" className="app-logo" />
       <h1 className="app-title">{t('title')}</h1>
       <div>
         <button onClick={() => changeLanguage('en')}>EN</button>

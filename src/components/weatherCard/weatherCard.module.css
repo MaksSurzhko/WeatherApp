@@ -240,13 +240,13 @@
 
 .boxMap {
     border: 1px solid #ddd;
-    background-color: #ddd;
-    border-radius: 20px;
-    padding: 7px;
-    width: 90%;
-    height: 86%;
-    position: relative;
-    top: 70px;
+        background-color: #ddd;
+        border-radius: 20px;
+        padding: 7px;
+        width: 100%;
+        height: 95%;
+        position: relative;
+        top: 15px;
 }
 
 .boxBtn {

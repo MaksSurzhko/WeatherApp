@@ -135,12 +135,14 @@ import GoogleMaps from '../map/map';
 import wcss from './weatherCard.module.css';
 import Forecast from '../forecast/forecast';
 import { useTranslation } from 'react-i18next';
+// import Geolocation from '../geolocation/geolocation';
+
 
 const WeatherCard = ({ city }) => {
   const [weatherDataList, setWeatherDataList] = useState([]);
   const [error, setError] = useState(null);
   const [isCelsius, setIsCelsius] = useState([]);
-  const [currentPage, setCurrentPage] = useState(0); 
+  const [currentPage, setCurrentPage] = useState(0);
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -228,8 +230,9 @@ const WeatherCard = ({ city }) => {
 
   return (
     <div>
+      {/* <Geolocation onSearch={(city) => handleSearch(city)} /> */}
       <SearchBar onSearch={handleSearch} />
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+      {error && <p className={wcss.error} style={{ color: 'red' }}>{error}</p>}
 
       {weatherDataList.length > 0 && (
         <div className={wcss.pagination}>
@@ -261,8 +264,8 @@ const WeatherCard = ({ city }) => {
               {t('Feels like')}{' '}
               {isCelsius[currentPage]
                 ? `${kelvinToCelsius(weatherDataList[currentPage].main.feels_like).toFixed(0)} °C`
-                : `${kelvinToFahrenheit(weatherDataList[currentPage].main.feels_like).toFixed(0)} °F`}.
-              {weatherDataList[currentPage].weather[0].description}.
+                : `${kelvinToFahrenheit(weatherDataList[currentPage].main.feels_like).toFixed(0)} °F`}  .
+              {weatherDataList[currentPage].weather[0].description} .
               {`${t('Wind')}: ${weatherDataList[currentPage].wind.speed}`}
             </p>
             <div className={wcss.boxBtn}>
@@ -294,3 +297,6 @@ const WeatherCard = ({ city }) => {
 };
 
 export default WeatherCard;
+
+
+

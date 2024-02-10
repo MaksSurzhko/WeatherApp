@@ -40,8 +40,7 @@ font-family: inherit;
     cursor: pointer;
 }
 
-.btn:hover,
-.btn:focus{
+.btn:hover{
     background-color: #434957;
 }
 
@@ -75,9 +74,4 @@ font-family: inherit;
     background-color: #282c34;
     cursor: pointer;
     transition: 200ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.btn:hover,
-.btn:focus {
-    background-color: #434957;
 }

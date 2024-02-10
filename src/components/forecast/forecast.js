@@ -36,7 +36,7 @@ const Forecast = ({ city }) => {
       {/* <h2>Weather Forecast for {city}</h2> */}
       {forecastData && (
         <div className={wcss.foreBoxTwo}>
-          <LineChart width={500} height={300} data={createChartData()}>
+          <LineChart width={570} height={300} data={createChartData()}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
             <YAxis />

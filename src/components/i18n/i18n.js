@@ -47,7 +47,7 @@ i18n.use(initReactI18next).init({
   resources: {
     en: {
       translation: {
-        title: 'Weather App',
+        title: 'Your weather',
         Remove: 'Remove',
         searchBarPlaceholder: 'Enter city name',
         searchBarButton: 'Search',
@@ -55,7 +55,7 @@ i18n.use(initReactI18next).init({
     },
     ua: {
       translation: {
-        title: 'Погода',
+        title: 'Твоя погода',
         Remove: 'Видалити',
         searchBarPlaceholder: 'Введіть назву міста',
         searchBarButton: 'Пошук',

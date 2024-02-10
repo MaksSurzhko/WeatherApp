@@ -248,11 +248,14 @@ const WeatherCard = ({ city }) => {
           <div className={wcss.boxTwo}>
             <h2 className={wcss.title}>{weatherDataList[currentPage].name}</h2>
             <p className={wcss.text}>{new Date(weatherDataList[currentPage].dt * 1000).toLocaleString()}</p>
-            <p className={wcss.text}>
+            
+            <div className={wcss.boxThree}>
+            <p className={wcss.textt}>
               {isCelsius[currentPage]
                 ? `${kelvinToCelsius(weatherDataList[currentPage].main.temp).toFixed(0)} °C`
                 : `${kelvinToFahrenheit(weatherDataList[currentPage].main.temp).toFixed(0)} °F`}
-            </p>
+              </p>
+              </div>
 
             <p className={wcss.text}>
               {t('Feels like')}{' '}
@@ -277,9 +280,6 @@ const WeatherCard = ({ city }) => {
           <button className={wcss.bremove} onClick={() => handleRemoveCity(currentPage)}>
             {t('Remove')}
           </button>
-          {/* <div className={wcss.boxForecast}>
-            <Forecast city={weatherDataList[currentPage].name} />
-          </div> */}
           <div className={wcss.boxMap}>
             <GoogleMaps
               key={`${weatherDataList[currentPage].coord.lat}-${weatherDataList[currentPage].coord.lon}`}

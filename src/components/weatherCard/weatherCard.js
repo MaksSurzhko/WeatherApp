@@ -244,12 +244,12 @@ const WeatherCard = () => {
               </div>
 
               <p className={wcss.text}>
-                {t('Feels like')}{' '}
+                {t('FeelsLike')}{' '}
                 {isCelsius[index]
-                  ? `${kelvinToCelsius(weatherData.main.feels_like).toFixed(0)} °C`
-                  : `${kelvinToFahrenheit(weatherData.main.feels_like).toFixed(0)} °F`}  .
-                {weatherData.weather[0].description} .
-                {`${t('Wind')}: ${weatherData.wind.speed}`}
+                ? `${kelvinToCelsius(weatherData.main.feels_like).toFixed(0)} ${t('Celsius')}`
+                : `${kelvinToFahrenheit(weatherData.main.feels_like).toFixed(0)} ${t('Fahrenheit')}`}  .
+                  {weatherData.weather[0].description} .
+                  {`${t('Wind')}: ${weatherData.wind.speed}`}
               </p>
               <div className={wcss.boxBtn}>
                 <button className={wcss.btngr} onClick={() => toggleToCelsius(index)}>

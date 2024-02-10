@@ -263,7 +263,7 @@ const WeatherCard = () => {
                 <Forecast city={weatherData.name} />
               </div>
             </div>
-            {/* Removed the "Remove" button */}
+            
             <div className={wcss.boxMap}>
               <GoogleMaps
                 key={`${weatherData.coord.lat}-${weatherData.coord.lon}`}

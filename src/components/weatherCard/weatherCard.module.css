@@ -130,7 +130,6 @@
 
 .box {
     display: flex;
-    width: 80%;
     height: 600px;
     margin: auto;
     border-radius: 25px;
@@ -263,14 +262,12 @@
     justify-content: flex-end;
     align-items: flex-end;
     margin-top: 10px;
-    margin-right: 10px;
-    width: 610px;
+    margin-right: 20px;
     
 }
 
 .foreBoxTwo {
     margin-bottom: 15px;
-    margin-left: 40px;
     padding-top: 20px;
     padding-right: 30px;
     border: 2px solid #282c34;
